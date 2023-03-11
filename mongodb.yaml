@@ -35,7 +35,7 @@ kind: Deployment
 metadata:
   name: mongodb-deployment
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   replicas: 1
   selector:
@@ -65,7 +65,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: mongodb-pvc
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   accessModes:
     - ReadWriteOnce
