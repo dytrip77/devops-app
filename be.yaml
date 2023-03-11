@@ -5,6 +5,8 @@ metadata:
       app: be
     name: be
     namespace: devops-app
+    annotations:
+      argocd.argoproj.io/sync-wave: "4"
 spec:
     allocateLoadBalancerNodePorts: true
     internalTrafficPolicy: Cluster
@@ -23,7 +25,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
     annotations:
-      deployment.kubernetes.io/revision: "9"
+      argocd.argoproj.io/sync-wave: "5"
     labels:
       app: be
     name: be
